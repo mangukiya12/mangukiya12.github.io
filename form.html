@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <title>registration form</title>
+    <link href="D:\jns\website\bootstrap-4.5.2-dist\css.bootstrap">
+    
+    <style>
+      html, body {
+      min-height: 100%;
+      }
+      body, div, form, input, select, p { 
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 16px;
+      color: #20b2aa;
+      }
+      body {
+      padding: 0;
+      margin: 0;
+      background: url("1.jpg") no-repeat center;
+      background-size: cover;
+      }
+      h1, h2 {
+      text-transform: uppercase;
+      font-weight: 400;
+      }
+      h2 {
+      margin: 0 0 0 8px;
+      }
+      .form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      padding: 25px;
+      background: rgba(0, 0, 0, 0.71); 
+      }
+       .title {
+      display: 
+      align-items: center;
+      margin-bottom: 50px;
+      background: white;
+      top: 0;
+      margin: 0;
+      padding: 0;
+      }
+      .info{
+      display: flex;
+      flex-direction: column;
+      }
+      input, select {
+      padding: 5px;
+      margin-bottom: 5px;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #eee;
+      }
+      input::placeholder {
+      color: #808080;
+      }
+      option:focus {
+      border: none;
+      }
+      option {
+      background: gray; 
+      border: none;
+      }privacy-policy input {
+      margin: 0 10px 10 0;
+      vertical-align: middle;
+      }
+      .privacy-policy a {
+      color: #26a9e0;
+      }
+      .privacy-policy a:hover {
+      color: #85d6de;
+      }
+
+  
+    
+
+  </style>
+</head>
+	<body>
+		<div class="screen">
+
+		
+		<div class="title"><h1>
+		<center> Customer Registation</center></h1>
+		</div>
+		
+      </div>
+			<div class="form"> 
+			<form action="/action_page.php" method="get">
+				<div class="info">
+					 <input class="fname" type="text" name="fname" placeholder="First Name"><br>
+					 <input type="text" name="mname" placeholder="Middle Name"><br>
+					 <input type="text" name="lname" placeholder="Last Name"><br>
+			          <input type="email" name="email" placeholder="Email"><br>
+			          <input type="tel" name="Mno" placeholder="Phone number" maxlength="10"><br>
+			          <input type="password" name="password" placeholder="Password"><br>
+			          <input type="password" name="Cpassword" placeholder="Conform Password"><br>
+			          <select>
+			            <option value="Gender" selected>Gender*</option>
+			            <option value="Male">Male</option>
+			            <option value="Female">Female</option>
+			            <option value="Other">Other</option>
+			           </select><br>
+			          <input type="text" name="address" placeholder="Street Address"><br>
+			          <input type="number" name="pin" placeholder="Pincode" maxlength="6"><br>
+			          <input type="text" name="city" placeholder="City"><br>
+			          <input type="text" name="State" placeholder="State"><br>
+
+						<div class="privacy-policy">
+		         			 <input type="checkbox" name="checkbox"><span>  I agree to the <a href="https://www.privacypolicygenerator.info/live.php?token=ZjULrCmFebNvX52wOI4dfBGK3YupPcQD">Privacy Poalicy </a></span>
+		        		</div>
+		        		<button type="submit" href="/">Submit</button> 
+					</div>
+				</div>
+		</div>
+		</form>
+	</body>
+</html>
