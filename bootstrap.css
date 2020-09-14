@@ -6832,8 +6832,8 @@ button.bg-light:focus {
 }
 
 .bg-dark {
-  background-color: #343a40 !important;
-  opacity: 80%;
+  background-color: #9932cc !important;
+  opacity: 95%;
 }
 
 a.bg-dark:hover, a.bg-dark:focus,
