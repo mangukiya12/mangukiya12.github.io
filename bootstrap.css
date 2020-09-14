@@ -5304,7 +5304,7 @@ a.badge-dark:focus, a.badge-dark.focus {
   padding: 2rem 1rem;
   margin-bottom: 2rem;
   margin-top: 70px;
-  background-color: #008b8b;
+  background-color: #9932cc;
   color: white;
   border-radius: 0.3rem;
 }
@@ -6612,7 +6612,7 @@ a.close.disabled {
   position: relative;
   /*width: 50%;*/
 }
-.overlay {
+/*.overlay {
   position: absolute;
   bottom: 100%;
   left: 0;
@@ -6627,7 +6627,7 @@ a.close.disabled {
 .containeer:hover .overlay {
   bottom: 0;
   height: 100%;
-}
+}*/
 .carousel-indicators {
   position: absolute;
   right: 0;
