@@ -9,8 +9,13 @@ body{
 	text-decoration: none;
 	font-family: montserrat;
 }
-nav{
+@media screen and (max-width:768px){
+	
+}
+/*nav{
+	display: inline-flex;
 	opacity: 0.75;
+	justify-content: space-around;
 	background-color: honeydew;
 	background-attachment: fixed;
 	position: fixed;
@@ -29,13 +34,18 @@ nav{
 }
 nav ul{
 	float: right;
-	margin-right: 20px;
-	list-style: none;
+	/*margin-right: 20px;*/
+	/*list-style: none;
 
 }
 nav ul li{
 	display: inline-block;
 	line-height: inherit;
+	width: 10%;
+}
+nav ul li{
+	display: inline-block;
+	justify-content: space-around;
 }
 nav ul li a{
 	border-radius: 8px;
@@ -51,7 +61,7 @@ ul li a.active,ul li a:hover{
 	color: white;
 	background-color: #282828;
 	transition: 0.5s;
-}
+}*/
 /*.ls{
 	margin-right: auto;
 	margin-left: 50px;
