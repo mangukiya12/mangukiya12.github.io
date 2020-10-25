@@ -113,7 +113,19 @@ ol ul,
 ul ol {
   margin-bottom: 0;
 }
-
+.map-container{
+overflow:hidden;
+padding-bottom:56.25%;
+position:relative;
+height:0;
+}
+.map-container iframe{
+left:0;
+top:0;
+height:100px;
+width:100px;
+position:absolute;
+}
 dt {
   font-weight: 700;
 }
@@ -6598,6 +6610,7 @@ a.close.disabled {
   display: inline-block;
   width: 20px;
   height: 20px;
+  color: #9932cc;
   background: no-repeat 50% / 100% 100%;
 }
 
@@ -6641,6 +6654,7 @@ a.close.disabled {
   padding-left: 0;
   margin-right: 15%;
   margin-left: 15%;
+  color: #9932cc;
   list-style: none;
 }
 
@@ -6654,7 +6668,7 @@ a.close.disabled {
   margin-left: 3px;
   text-indent: -999px;
   cursor: pointer;
-  background-color: #fff;
+  background-color: #9932cc;
   background-clip: padding-box;
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
@@ -6680,7 +6694,7 @@ a.close.disabled {
   z-index: 10;
   padding-top: 20px;
   padding-bottom: 20px;
-  color: #fff;
+  color: #9932cc;
   text-align: center;
 }
 

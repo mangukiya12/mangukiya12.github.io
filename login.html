@@ -20,6 +20,20 @@
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
+	<script>
+		function validateForm() {
+		  	var x = document.forms["login"]["email"].value;
+		 	var y = document.forms["login"]["pass"].value;
+		  	if (x == "") {
+			    alert("Email must be filled out");
+			    return false;
+		  	}
+		  	if (y == "") {
+		  		alert("Password not filled");
+		  		return false;
+		  	}
+		}
+	</script>
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
@@ -65,7 +79,7 @@
 					<img src="images/img-01.png" alt="IMG">
 				</div>
 
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" name="login" onsubmit="return validateForm()">
 					<span class="login100-form-title">
 						Member Login
 					</span>

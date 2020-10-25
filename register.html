@@ -20,6 +20,45 @@
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
+	<script>
+		function validateForm() {
+		  	var x = document.forms["register"]["name"].value;
+		 	var y = document.forms["register"]["email"].value;
+		 	var z = document.forms["register"]["number"].value;
+		 	var a = document.forms["register"]["pass"].value;
+		 	var b = document.forms["register"]["address"].value;
+		 	var c = document.forms["register"]["pincode"].value;
+		 	var d = document.forms["register"]["cpass"].value;
+		  	if (x == "") {
+			    alert("Email must be filled out");
+			    return false;
+		  	}
+		  	if (y == "") {
+		  		alert("Please enter your email");
+		  		return false;
+		  	}
+		  	if (z == "") {
+		  		alert("Please Enter your number");
+		  		return false;
+		  	}
+		  	if (a == "") {
+		  		alert("Please Enter password");
+		  		return false;
+		  	}
+		  	if (b == "") {
+		  		alert("Please Enter Address");
+		  		return false;
+		  	}
+		  	if (c == "") {
+		  		alert("Please Enter Pincode");
+		  		return false;
+		  	}
+		  	if (d == "") {
+		  		alert("Please Enter Confirm password");
+		  		return false;
+		  	}
+		}
+	</script>
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
@@ -65,7 +104,7 @@
 					<img src="images/img-01.png" alt="IMG">
 				</div>
 
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" name="register" onsubmit="return validateForm()">
 					<span class="login100-form-title">
 						Member Register
 					</span>
@@ -103,7 +142,7 @@
 					</div>
 					
 					<div class="wrap-input100 validate-input">
-						<input class="input100" type="password" name="pass" placeholder="Confirm Password">
+						<input class="input100" type="password" name="cpass" placeholder="Confirm Password">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-lock" aria-hidden="true"></i>
@@ -119,7 +158,7 @@
 					</div>
 					
 					<div class="wrap-input100 validate-input">
-						<input class="input100" type="password" name="address" placeholder="Pincode">
+						<input class="input100" type="password" name="pincode" placeholder="Pincode">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-map-marker" aria-hidden="true"></i>
