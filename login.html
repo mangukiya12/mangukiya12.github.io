@@ -21,11 +21,11 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
 	<script>
-		function validateForm() {
+		function validate() {
 			var emailRegex = /^[A-Za-z0-9._]*\@[A-Za-z]*\.[A-Za-z]{2,5}$/;
-		  	var x = document.forms["login"]["email"].value;
-		 	var y = document.forms["login"]["pass"].value;
-		  	if (x == "") {
+		  	var em = document.forms["login"]["email"].value;
+		 	var pwd = document.forms["login"]["pass"].value;
+		  	if (em == "") {
 			    alert("Email must be filled out");
 			    return false;
 		  	}
@@ -34,7 +34,7 @@
 		 		document.login.email.focus();
 				return false;
 	 		}*/
-		  	if (y == "") {
+		  	if (pwd == "") {
 		  		alert("Password not filled");
 		  		return false;
 		  	}
@@ -85,7 +85,7 @@
 					<img src="images/img-01.png" alt="IMG">
 				</div>
 
-				<form class="login100-form validate-form" name="login" onsubmit="return validateForm()">
+				<form class="login100-form validate-form" name="login" onsubmit="return validate()">
 					<span class="login100-form-title">
 						Member Login
 					</span>
