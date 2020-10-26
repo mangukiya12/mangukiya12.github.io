@@ -22,6 +22,8 @@
 <!--===============================================================================================-->
 	<script>
 		function validateForm() {
+			var emailRegex = /^[A-Za-z0-9._]*\@[A-Za-z]*\.[A-Za-z]{2,5}$/;
+			var letters = /^[A-Za-z ]+$/; 
 		  	var x = document.forms["register"]["name"].value;
 		 	var y = document.forms["register"]["email"].value;
 		 	var z = document.forms["register"]["number"].value;
@@ -30,33 +32,77 @@
 		 	var c = document.forms["register"]["pincode"].value;
 		 	var d = document.forms["register"]["cpass"].value;
 		  	if (x == "") {
-			    alert("Email must be filled out");
+			    alert("Name must be filled out");
+			   	document.register.name.focus();
+
 			    return false;
 		  	}
-		  	if (y == "") {
-		  		alert("Please enter your email");
-		  		return false;
-		  	}
-		  	if (z == "") {
-		  		alert("Please Enter your number");
-		  		return false;
-		  	}
+		  	if(!letters.test(x)){
+			 	alert("Name has to be alphabets");
+				document.register.name.focus();
+				return false;
+	 		}
+		  	if (y== "" )
+			{
+				alert("Enter email");
+				 document.register.email.focus();
+				return false;
+	 		}
+	 		else if(!emailRegex.test(y)){
+				alert("email format is not valid");
+		 		document.register.email.focus();
+				return false;
+	 		}
+		  	if(isNaN(z))
+			 {
+				 alert("Enter numbers");
+				 document.register.number.focus();
+				 return false;
+			 }
+	 		if(z.length != 10)
+			 {
+				alert("Enter number equal to 10");
+				document.register.number.focus();
+				 return false;
+			 }
 		  	if (a == "") {
 		  		alert("Please Enter password");
-		  		return false;
-		  	}
-		  	if (b == "") {
-		  		alert("Please Enter Address");
-		  		return false;
-		  	}
-		  	if (c == "") {
-		  		alert("Please Enter Pincode");
+		  		document.register.pass.focus();
 		  		return false;
 		  	}
 		  	if (d == "") {
 		  		alert("Please Enter Confirm password");
 		  		return false;
 		  	}
+
+			if(a!=d)
+	 		{
+	 	 		alert("Both password need to be same");
+		 		document.register.cpass.focus();
+		 		return false;
+	 		}
+		  	if (b == "") {
+		  		alert("Please Enter Address");
+		  		document.register.address.focus();
+		  		return false;
+		  	}
+		  	if (c == "") {
+		  		alert("Please Enter Pincode");
+		  		return false;
+		  	}
+		  	if(isNaN(c))
+			 {
+				 alert("Enter Valid Pincode");
+				 document.register.number.focus();
+				 return false;
+			 }
+			 if(c.length != 6)
+			 {
+				alert("Enter number equal to 6");
+				document.register.number.focus();
+				 return false;
+			 }
+		  	
 		}
 	</script>
 </head>
@@ -118,7 +164,7 @@
 					</div>
 					
 					<div class="wrap-input100 validate-input">
-						<input class="input100" type="text" name="email" placeholder="Email">
+						<input class="input100" type="text"  pattern=".+@gmail.com" size="30" name="email" placeholder="Email">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-envelope" aria-hidden="true"></i>
@@ -126,7 +172,7 @@
 					</div>
 					
 					<div class="wrap-input100 validate-input">
-						<input class="input100" type="text" name="number" placeholder="Mobile Number ">
+						<input class="input100" type="number" name="number" placeholder="Mobile Number ">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-phone" aria-hidden="true"></i>

@@ -22,12 +22,18 @@
 <!--===============================================================================================-->
 	<script>
 		function validateForm() {
+			var emailRegex = /^[A-Za-z0-9._]*\@[A-Za-z]*\.[A-Za-z]{2,5}$/;
 		  	var x = document.forms["login"]["email"].value;
 		 	var y = document.forms["login"]["pass"].value;
 		  	if (x == "") {
 			    alert("Email must be filled out");
 			    return false;
 		  	}
+		  	else if(!emailRegex.test(y)){
+				alert("email is not valid");
+		 		document.register.email.focus();
+				return false;
+	 		}
 		  	if (y == "") {
 		  		alert("Password not filled");
 		  		return false;
@@ -85,7 +91,7 @@
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-						<input class="input100" type="text" name="email" placeholder="Email">
+						<input class="input100" type="text"  pattern=".+@gmail.com" size="30" name="email" placeholder="Email">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-envelope" aria-hidden="true"></i>
