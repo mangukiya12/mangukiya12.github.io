@@ -6488,6 +6488,8 @@ a.close.disabled {
 .carousel-inner {
   position: relative;
   width: 100%;
+  align-items: center;
+  align-content: center;
   overflow: hidden;
 }
 
@@ -6495,6 +6497,7 @@ a.close.disabled {
   display: block;
   clear: both;
   content: "";
+  align-items: center;  
 }
 
 .carousel-item {
